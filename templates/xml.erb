@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<doc>
+<% doc.palettes.each do |palette| %>
+	<palette name="<%= palette[1].name %>">
+		<% palette[1].colors.each do |color| %>
+			<colori name="<%= color[0] %>" hex="<%= color[1].to_rgb %>"></color>
+		<% end %>
+	</palette>
+<% end %>
+</doc>
