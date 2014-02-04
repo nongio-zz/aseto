@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>An XHTML 1.0 Strict standard template</title>
+	<meta http-equiv="content-type" 
+		content="text/html;charset=utf-8" />
+		<style type="text/css">
+		.ball {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border-radius: 10px	;
+		}
+		</style>
+</head>
+
+<body>
+<% doc.palettes.each do |palette| %>
+	<div class="palette" name="">
+		<h1><%= palette[1].name %></h1>
+		<% palette[1].colors.each do |color| %>
+			<span class="ball" style="background-color: <%= color[1].to_rgb %>"></span>
+		<% end %>
+	</div>
+<% end %>
+     
+
+</body>
+</html>
